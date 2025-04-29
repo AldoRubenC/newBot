@@ -7,7 +7,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(f"El ID de este canal/grupo es: {chat_id}")
 
 async def main():
-    token = os.getenv("7714496610:AAG91ImaiK5EKH5Dcn1kjTn6T3w-GRD0Y4o")
+    token = os.getenv("BOT_TOKEN","7714496610:AAG91ImaiK5EKH5Dcn1kjTn6T3w-GRD0Y4o")
     app = ApplicationBuilder().token(token).build()
     
     app.add_handler(MessageHandler(filters.ALL, handle_message))
